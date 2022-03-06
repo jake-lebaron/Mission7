@@ -9,8 +9,8 @@ using Mission7.Models;
 namespace Mission7.Migrations
 {
     [DbContext(typeof(BookstoreContext))]
-    [Migration("20220303040103_AddPurchasesTable")]
-    partial class AddPurchasesTable
+    [Migration("20220306010114_Initial")]
+    partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -92,9 +92,6 @@ namespace Mission7.Migrations
 
                     b.Property<string>("AddressLine3")
                         .HasColumnType("TEXT");
-
-                    b.Property<bool>("Anonymous")
-                        .HasColumnType("INTEGER");
 
                     b.Property<string>("City")
                         .IsRequired()

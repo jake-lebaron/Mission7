@@ -30,9 +30,9 @@ namespace Mission7.Models
             }
         }
 
-        public virtual void RemoveItem (Book bo)
+        public virtual void RemoveItem (Book b)
         {
-            Items.RemoveAll(x => x.Book.BookId == bo.BookId);
+            Items.RemoveAll(x => x.Book.BookId == b.BookId);
         }
 
         public virtual void ClearBasket()

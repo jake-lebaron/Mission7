@@ -11,7 +11,7 @@ namespace Mission7.Models
 {
     public class SessionBasket : Basket
     {
-        public static Basket GetBasket (IServiceProvider services)
+        public static Basket GetBasket(IServiceProvider services)
         {
             ISession session = services.GetRequiredService<IHttpContextAccessor>()?.HttpContext.Session;
 
@@ -24,6 +24,7 @@ namespace Mission7.Models
 
         [JsonIgnore]
         public ISession Session { get; set; }
+
 
         public override void AddItem(Book book, int qty)
         {
