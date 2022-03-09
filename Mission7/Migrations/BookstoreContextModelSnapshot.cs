@@ -103,6 +103,9 @@ namespace Mission7.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
+                    b.Property<bool>("PurchaseRecieved")
+                        .HasColumnType("INTEGER");
+
                     b.Property<string>("State")
                         .IsRequired()
                         .HasColumnType("TEXT");

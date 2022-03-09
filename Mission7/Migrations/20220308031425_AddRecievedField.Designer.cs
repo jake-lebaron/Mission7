@@ -9,8 +9,8 @@ using Mission7.Models;
 namespace Mission7.Migrations
 {
     [DbContext(typeof(BookstoreContext))]
-    [Migration("20220306010114_Initial")]
-    partial class Initial
+    [Migration("20220308031425_AddRecievedField")]
+    partial class AddRecievedField
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -104,6 +104,9 @@ namespace Mission7.Migrations
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("TEXT");
+
+                    b.Property<bool>("PurchaseRecieved")
+                        .HasColumnType("INTEGER");
 
                     b.Property<string>("State")
                         .IsRequired()
